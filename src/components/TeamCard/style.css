@@ -1,0 +1,36 @@
+.card-container {
+  background: #112b2a;
+  border-radius: 18px;
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+     -moz-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+          box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  width: 265px;
+  text-align: right;
+}
+
+.card-intro {
+  text-align: center;
+  padding: 50px 10px 20px;
+}
+
+hr {
+  border-top: 3px solid rgba(0,0,0,.1);
+}
+
+
+.card-contact {
+  padding: 15px 0 20px;
+}
+
+li {
+  color: #86E1FF;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+a {
+  padding-left: 10px;
+  color: #86E1FF;
+}
+

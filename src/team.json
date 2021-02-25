@@ -1,0 +1,109 @@
+[
+    {
+        "id": 1,
+        "name": "richard stevens",
+        "title": "Manager",
+        "location": "New York",
+        "phone": "(516) 555–1234",
+        "email": "rstevens@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/richard-stevens-img.png"
+    },
+    {
+        "id": 2,
+        "name": "jocelyn curtis",
+        "title": "Designer",
+        "location": "Chicago",
+        "phone": "(312) 555–5678",
+        "email": "jcurtis@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/jocelyn-curtis-img.png"
+    },
+    {
+        "id": 3,
+        "name": "nolan lipshutz",
+        "title": "Manager",
+        "location": "Las Vegas",
+        "phone": "(702) 555–9101",
+        "email": "nlipshutz@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/nolan-lipshutz-img.png"
+    },
+    {
+        "id": 4,
+        "name": "jakob philips",
+        "title": "Designer",
+        "location": "Texas",
+        "phone": "(214) 555–1213",
+        "email": "jphilips@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/jakob-philips-img.png"
+    },
+    {
+        "id": 5,
+        "name": "lincoln aminoff",
+        "title": "Designer",
+        "location": "Chicago",
+        "phone": "(312) 555–1516",
+        "email": "laminoff@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/lincoln-aminoff-img.png"
+    },
+    {
+        "id": 6,
+        "name": "rayna carder",
+        "title": "Developer",
+        "location": "Texas",
+        "phone": "(214) 555–1718",
+        "email": "rcarder@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/rayna-carder-img.png"
+    },
+    {
+        "id": 7,
+        "name": "carter gouse",
+        "title": "Manager",
+        "location": "Las Vegas",
+        "phone": "(702) 555–1920",
+        "email": "cgouse@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/carter-gouse-img.png"
+    },
+    {
+        "id": 8,
+        "name": "desirae westervelt",
+        "title": "Developer",
+        "location": "New York",
+        "phone": "(516) 555–2122",
+        "email": "dwestervelt@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/desirae-westervelt-img.png"
+    },
+    {
+        "id": 9,
+        "name": "kierra george",
+        "title": "Developer",
+        "location": "Las Vegas",
+        "phone": "(702) 555–2324",
+        "email": "kgeorge@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/kierra-george-img.png"
+    },
+    {
+        "id": 10,
+        "name": "roger mango",
+        "title": "Manager",
+        "location": "Chicago",
+        "phone": "(312) 555–2526",
+        "email": "rmango@digidigits.com"
+    },
+    {
+        "id": 11,
+        "name": "ashlynn saris",
+        "title": "Developer",
+        "location": "Texas",
+        "phone": "(214) 555–2728",
+        "email": "asaris@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/ashlynn-saris-img.png"
+    },
+    {
+        "id": 12,
+        "name": "miracle geidt",
+        "title": "Developer",
+        "location": "New York",
+        "phone": "(516) 555–2930",
+        "email": "mgeidt@digidigits.com",
+        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/miracle-geidt-img.png"
+    }
+]

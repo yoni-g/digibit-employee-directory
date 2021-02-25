@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;800&family=Lato&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Darker Grotesque', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #143634;
+}
+
+/* Typography */
+h1 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'lato', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 18px;
+  /* font-style: italic; */
+  font-weight: 400;
+  color: #dad524;
+  border: 1px rgba(218, 213, 36, .50) solid;
+  text-align: center;
+  padding: 20px;
+  margin: 30px;
+}
+
+p, 
+a {
+  font-family: 'lato', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4CE0D2;
+  transition: ease .5s;
+}
+
+/* Colors */
+.bg-color {
+  background-color: #143634;
+}
+.bg-lighter-color {
+  background-color: #1B4644;
+}
+.bg-lightest-color {
+  background-color: #326360;
+}
+.text-color {
+  color: #4CE0D2;
+}
+.interactive-color {
+  color: #86E1FF;
+}
+
+
+/* —————————————————————————————————————————————
+MEDIA QUERIES 
+————————————————————————————————————————————— */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 46px;
+  }
+}
