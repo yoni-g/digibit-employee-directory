@@ -36,9 +36,11 @@ function App() {
   useEffect(() => {
     // When the search field (state) is empty the orginal team array is loaded
     // if(team.length == 0){
+    setLoading(true)
     getMembersList()
       .then(members => {
         setTeam(members);
+        setLoading(false)
         console.log(members);
       })
       // }
