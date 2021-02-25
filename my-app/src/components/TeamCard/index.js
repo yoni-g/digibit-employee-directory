@@ -1,27 +1,38 @@
 import React from 'react';
-import './style.css';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import Image from "react-bootstrap/Image";
 import LazyLoad from 'react-lazyload';
+import { FaPhoneAlt, FaEnvelope, FaIndustry, FaUserCircle, FaSpinner } from 'react-icons/fa';
+
+import './style.css';
 
 
 
-function TeamCard({ name, title, location, phone, email, img }) {
+function TeamCard({ name, company, industry, phone, email, userimageurl }) {
 
     return (
 
         <div className="card-container">
             <div className="card-intro text-color">
+            { userimageurl && (
                 <LazyLoad height="41">
-                    <img src={img} alt={name} />
+                    <Image 
+                        src={userimageurl} 
+                        roundedCircle 
+                        alt={name}
+                        style={{maxHeight : "11rem"}}
+                    />
                 </LazyLoad >
+            )}
+            { !userimageurl && <FaUserCircle size={"9rem"}/> }
 
                 <h2>{name}</h2>
-                <h3>{title}</h3>
+                <h3>{company}</h3>
             </div>
             <hr />
+            
             <div className="card-contact">
                 <ul>
-                    <li><FaMapMarkerAlt /> <a rel="noopener noreferrer" target="_blank" href={`https://www.google.com/maps/place/${location}`}>{location} Office</a></li>
+                    <li><FaIndustry /> {industry}</li>
                     <li><FaPhoneAlt /> <a href={`tel:${phone}`}>{phone}</a></li>
                     <li><FaEnvelope /> <a href={`mailto:${email}`}>Send Email</a></li>
                 </ul>

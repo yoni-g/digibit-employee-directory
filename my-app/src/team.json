@@ -86,8 +86,7 @@
         "title": "Manager",
         "location": "Chicago",
         "phone": "(312) 555–2526",
-        "email": "rmango@digidigits.com",
-        "img": "https://raw.githubusercontent.com/GedalyaKrycer/unit-19-react-homework-employee-directory/master/my-app/src/img/roger-mango-img.png"
+        "email": "rmango@digidigits.com"
     },
     {
         "id": 11,

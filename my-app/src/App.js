@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { Spinner } from "react-bootstrap";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import FilterBar from "./components/FilterBar";
 import CardWrapper from "./components/CardWrapper";
 import TeamCard from "./components/TeamCard";
-import teamArray from "./team.json";
+// import teamArray from "./team.json";
 import { getMembersList } from "./service/getKlikaMembersSync"
 
 
 
 function App() {
   // Handles which cards get wrapped to
-  const [team, setTeam] = useState(teamArray);
+  const [team, setTeam] = useState([]);
+
+  const [filteredMembers, setFiltered] = useState([]);
 
   // Handles the search state
   const [search, setSearch] = useState('');
 
   // Handles the warning validations for search
-  const [warning, setWarning] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // Handles the name sorting state
   const [nameSort, setNameSort] = useState("AZ");
@@ -32,11 +36,12 @@ function App() {
   useEffect(() => {
     // When the search field (state) is empty the orginal team array is loaded
     if (!search) {
-      return setTeam(teamArray);
+      return setTeam(team);
     }
     // if(team.length == 0){
     getMembersList()
       .then(members => {
+        setTeam(members);
         console.log(members);
     })
     // }
@@ -55,7 +60,7 @@ function App() {
       person.name.includes(search.toLowerCase())
     );
     setTeam(results);
-    setWarning(false);
+    // setWarning(false);
 
 
   }, [search])
@@ -79,7 +84,7 @@ function App() {
 
   // Resets to all the team cards
   const resetTeam = () => {
-    setTeam(teamArray);
+    setTeam(team);
     setSearch("");
   }
 
@@ -109,24 +114,23 @@ function App() {
           handleInputChange={handleInputChange}
           resetBtn={resetTeam}
           sortBtn={sortNames}
-          children={nameSort === "AZ" ? "Sort A–Z" : "Sort Z–A"} />
+          children={nameSort === "AZ" ? "Sort A–Z" : "Sort Z–A"} 
+        />
 
-        {/* Validation */}
-        {/* {warning === false ? null : <h4>Woops, please use letters only. Numbers or special characters won't display results.</h4>} */}
-        {team.length === 0 ? <h4>Looks like we don't have this team member. Please try a different name or hit "Reset".</h4> : null}
+        { team.length === 0 && <h4>.לא נמצאו תוצאות</h4>}
         
+        { loading && (
+          <div style={{textAlign: "center"}}>
+            <Spinner 
+              animation="border"
+              variant="light"
+            />
+          </div>
+        )}
           <CardWrapper>
-            {team.map(person => (
-              <TeamCard
-                key={person.id}
-                img={person.img}
-                name={person.name}
-                title={person.title}
-                location={person.location}
-                phone={person.phone}
-                email={person.email}
-              />
-            ))}
+            { team.map(member => (
+                <TeamCard {...member} />
+            )) }
           </CardWrapper>
         
       </Main>

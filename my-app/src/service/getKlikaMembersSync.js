@@ -6,19 +6,21 @@ const rowNames = [
     "email",
     "industry",
     "phone",
+    "userimageurl"
 ]
 
-const gsxRowName = (rowName) => {
-    return `gsx$${rowName}`
-}
+const gsxRowName = (rowName) => `gsx$${rowName}`
 
 const parseMember = (gsxRow) => {
     var member = {}
     rowNames.forEach(rowName => {
         // console.log(gsxRow[gsxRowName(rowName)])
         let rowObject = gsxRow[gsxRowName(rowName)]
-        member[rowName] = rowObject["$t"]
+        if (rowObject != undefined){
+            member[rowName] = rowObject["$t"]
+        }
     })
+    member["key"] = new Date().getTime() + Math.random()*16
     return member
 }
 
