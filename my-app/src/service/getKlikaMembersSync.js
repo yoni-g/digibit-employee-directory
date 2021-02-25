@@ -6,7 +6,8 @@ const rowNames = [
     "email",
     "industry",
     "phone",
-    "userimageurl"
+    "userimageurl",
+    "website"
 ]
 
 const gsxRowName = (rowName) => `gsx$${rowName}`

@@ -1,17 +1,17 @@
 import React from 'react';
 import Image from "react-bootstrap/Image";
 import LazyLoad from 'react-lazyload';
-import { FaPhoneAlt, FaEnvelope, FaIndustry, FaUserCircle, FaSpinner } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaIndustry, FaUserCircle, FaSpinner, FaLink } from 'react-icons/fa';
 
 import './style.css';
 
 
 
-function TeamCard({ name, company, industry, phone, email, userimageurl }) {
+function TeamCard({ name, company, industry, phone, email, userimageurl, website }) {
 
     return (
 
-        <div className="card-container">
+        <div className="card-container" dir="rtl">
             <div className="card-intro text-color">
             { userimageurl && (
                 <LazyLoad height="41">
@@ -32,9 +32,10 @@ function TeamCard({ name, company, industry, phone, email, userimageurl }) {
             
             <div className="card-contact">
                 <ul>
-                    <li><FaIndustry /> {industry}</li>
+                    { industry && <li><FaIndustry /> {industry}</li> }
                     <li><FaPhoneAlt /> <a href={`tel:${phone}`}>{phone}</a></li>
-                    <li><FaEnvelope /> <a href={`mailto:${email}`}>Send Email</a></li>
+                    <li><FaEnvelope /> <a href={`mailto:${email}`}>אימייל</a></li>
+                    { website && <li><FaLink /> <a href={website}>אתר</a></li> }
                 </ul>
             </div>
         </div>
