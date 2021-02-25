@@ -28,9 +28,10 @@ li {
   list-style: none;
   margin-bottom: 15px;
 }
-
+svg{
+  margin-left: 10px;
+}
 a {
-  padding-left: 10px;
   color: #86E1FF;
 }
 
