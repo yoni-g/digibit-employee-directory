@@ -85,6 +85,11 @@ function App() {
     setSearch("");
   }
 
+  const sortLabel = (sort) => {
+    let sortValue = sort === "AZ" ? "ת-א" : "א-ת" 
+    return `מיין לפי: ${sortValue}`
+  }
+
   return (
     <>
       <Header />
@@ -94,10 +99,10 @@ function App() {
           handleInputChange={handleInputChange}
           resetBtn={resetTeam}
           sortBtn={sortNames}
-          children={nameSort === "AZ" ? "Sort A–Z" : "Sort Z–A"} 
+          children={sortLabel(nameSort)} 
         />
 
-        { team.length === 0 && <h4>.לא נמצאו תוצאות</h4>}
+        { team.length === 0 && !loading && <h4>.לא נמצאו תוצאות</h4>}
         
         { loading && (
           <div style={{textAlign: "center"}}>

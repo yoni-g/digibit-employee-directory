@@ -19,11 +19,11 @@ function TeamCard({ name, company, industry, phone, email, userimageurl, website
                         src={userimageurl} 
                         roundedCircle 
                         alt={name}
-                        style={{maxHeight : "11rem"}}
+                        style={{maxHeight : "10rem"}}
                     />
                 </LazyLoad >
             )}
-            { !userimageurl && <FaUserCircle size={"9rem"}/> }
+            { !userimageurl && <FaUserCircle size={"10rem"}/> }
 
                 <h2>{name}</h2>
                 <h3>{company}</h3>
