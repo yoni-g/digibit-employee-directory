@@ -10,9 +10,9 @@ function FilterBar({ inputValue, handleInputChange, resetBtn, sortBtn, children,
     return (
         <Row>
             <Col md={4}>
-                <FilterSearch
+                {/* <FilterSearch
                     inputValue={inputValue}
-                    handleInputChange={handleInputChange} />
+                    handleInputChange={handleInputChange} /> */}
             </Col>
             <Col md={8} className="button-group">
                 <FilterBtnGroup resetBtn={resetBtn} sortBtn={sortBtn} children={children} handleSelectDropdown={handleSelectDropdown} />

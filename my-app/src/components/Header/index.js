@@ -13,7 +13,7 @@ function Header() {
             <Container>
                 <Navbar className="justify-content-between">
                     <Navbar.Brand>
-                        <img src={Logo} alt="Klika Logo" />
+                        <img src={Logo} alt="Klika Logo" style={{width: "14rem"}} />
                     </Navbar.Brand>
                     <Nav>
                         <Nav.Link href="https://github.com/yoni-g/digibit-employee-directory" target="_Blank"><FaGithub className="github-icon" /></Nav.Link>
