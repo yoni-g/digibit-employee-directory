@@ -16,7 +16,11 @@ function Header() {
                         <img src={Logo} alt="Klika Logo" style={{width: "14rem"}} />
                     </Navbar.Brand>
                     <Nav>
-                        <Nav.Link href="https://github.com/yoni-g/digibit-employee-directory" target="_Blank"><FaGithub className="github-icon" /></Nav.Link>
+                        <Nav.Link 
+                            href="https://github.com/yoni-g/digibit-employee-directory" 
+                            target="_Blank">
+                            <FaGithub className="github-icon" />
+                        </Nav.Link>
                     </Nav>
 
                 </Navbar>

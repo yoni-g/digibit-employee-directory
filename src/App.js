@@ -35,37 +35,32 @@ function App() {
   // Runs the first time the app starts or a new search term is provided
   useEffect(() => {
     // When the search field (state) is empty the orginal team array is loaded
-    if (!search) {
-      return setTeam(team);
-    }
     // if(team.length == 0){
     getMembersList()
       .then(members => {
         setTeam(members);
         console.log(members);
-    })
-    // }
-
-    // Validates that the input is not a valid letter. If so it sets the warning boolean to true, resets the team array and clears the search field, before returning 
-    // if (!/^[a-zA-Z]*$/g.test(search)) {
-    //   setSearch("");
-    //   setTeam(teamArray);
-    //   setWarning(true);
-    //   return;
-
-    // }
+      })
+      // }
+    if (!search) {
+      return setTeam(team);
+    }
 
     // Powers the search to only show the people that match the search value state
-    const results = team.filter(person =>
-      person.name.includes(search.toLowerCase())
-    );
+    const results = team.filter(person => {
+      return person.name.includes(search.toLowerCase()) || 
+              person.industry.includes(search.toLowerCase()) || 
+                person.company.includes(search.toLowerCase())
+    });
     setTeam(results);
     // setWarning(false);
 
 
   }, [search])
 
+  // const filterMembers = (member) => {
 
+  // }
 
   const sortNames = () => {
     switch (nameSort) {
@@ -87,23 +82,6 @@ function App() {
     setTeam(team);
     setSearch("");
   }
-
-  // const fetchMembers = async () => {
-  //   // setTeam(teamArray);
-  //   // setSearch("");
-  //   await fetchKlikaMembers()
-  //     .then(res => {
-        
-  //       res.json().then(data => {
-  //         console.log(data);
-
-  //       });
-  //      })
-  // }
-
-  // fetchMembers()
-  // console.log(members);
-  
 
   return (
     <>
