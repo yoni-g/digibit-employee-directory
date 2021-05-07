@@ -1,29 +1,32 @@
 import React from 'react';
 import Image from "react-bootstrap/Image";
 import LazyLoad from 'react-lazyload';
-import { FaPhoneAlt, FaEnvelope, FaIndustry, FaUserCircle, FaSpinner, FaLink } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaIndustry, FaUserCircle, FaLink } from 'react-icons/fa';
 
 import './style.css';
 
 
 
 function TeamCard({ name, company, industry, phone, email, userimageurl, website }) {
-
+    
+    const defaultImageSize = "10rem"
+    
     return (
 
         <div className="card-container" dir="rtl">
             <div className="card-intro text-color">
-            { userimageurl && (
+            { userimageurl ? 
                 <LazyLoad height="41">
                     <Image 
                         src={userimageurl} 
                         roundedCircle 
                         alt={name}
-                        style={{maxHeight : "10rem"}}
+                        style={{maxHeight : defaultImageSize}}
                     />
                 </LazyLoad >
-            )}
-            { !userimageurl && <FaUserCircle size={"10rem"}/> }
+                : 
+                <FaUserCircle size={defaultImageSize}/> 
+            }
 
                 <h2>{name}</h2>
                 <h3>{company}</h3>
